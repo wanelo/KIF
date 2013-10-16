@@ -1,4 +1,4 @@
-//
+///
 //  KIFTestStep.m
 //  KIF
 //
@@ -461,7 +461,7 @@ typedef CGPoint KIFDisplacement;
         KIFTestWaitCondition([view isDescendantOfFirstResponder], error, @"Failed to make the view with accessibility label \"%@\" the first responder. First responder is %@", label, [[[UIApplication sharedApplication] keyWindow] firstResponder]);
         
         // Wait for the keyboard
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.5, false);
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.5, false);
         
         for (NSUInteger characterIndex = 0; characterIndex < [text length]; characterIndex++) {
             NSString *characterString = [text substringWithRange:NSMakeRange(characterIndex, 1)];
