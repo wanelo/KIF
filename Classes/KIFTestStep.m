@@ -420,7 +420,7 @@ typedef CGPoint KIFDisplacement;
     NSString *description = [NSString stringWithFormat:@"Type the text \"%@\" into the current first responder", text];
     return [self stepWithDescription:description executionBlock:^(KIFTestStep *step, NSError **error) {
         // Wait for the keyboard
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.5, false);
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.5, false);
 
         for (NSUInteger characterIndex = 0; characterIndex < [text length]; characterIndex++) {
             NSString *characterString = [text substringWithRange:NSMakeRange(characterIndex, 1)];
